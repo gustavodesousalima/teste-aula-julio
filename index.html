@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alteração de Fundo</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .row {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .col-12 {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="row">
+            <div class="col-12">
+            </div>
+        </div>
+    </div>
+    <script>
+        let body = document.getElementsByTagName("body")[0];
+        let container = document.getElementById("container");
+        
+        let entradaUser = parseInt(prompt("Digite um horário:"));
+
+        /* Se for de madrugada */
+        if (entradaUser >= 0 && entradaUser < 5) {
+            container.style.backgroundImage = "url('./image/madrugada.jpeg')";
+            container.style.backgroundSize = "cover";
+            body.style.backgroundColor = "#000000";
+        /* Se for de manhã */
+        } else if (entradaUser >= 5 && entradaUser < 12) {
+            container.style.backgroundImage = "url('./image/manha.jpg')";
+            container.style.backgroundSize = "cover";
+            body.style.backgroundColor = "#A6C2DF";
+        /* Se for de tarde */
+        } else if (entradaUser >= 12 && entradaUser < 18) {
+            container.style.backgroundImage = "url('./image/tarde.jpg')";
+            container.style.backgroundSize = "cover";
+            body.style.backgroundColor = "#FFA500";
+        /* Se for de noite */
+        } else if (entradaUser >= 18 && entradaUser < 24) {
+            container.style.backgroundImage = "url('./image/noite.jpg')";
+            container.style.backgroundSize = "cover";
+            body.style.backgroundColor = "#000000";
+        /* Se for de Horário inválido */
+        } else {
+            window.alert("Digite um horário válido");
+        }
+    </script>
+</body>
+</html>
