@@ -55,12 +55,12 @@
             container.style.backgroundSize = "cover";
             body.style.backgroundColor = "#000000";
         /* Se for de manhã */
-        } else if (entradaUser >= 5 && entradaUser < 12) {
+        } else if (entradaUser >= 5 && entradaUser <= 12) {
             container.style.backgroundImage = "url('./image/manha.jpg')";
             container.style.backgroundSize = "cover";
             body.style.backgroundColor = "#A6C2DF";
         /* Se for de tarde */
-        } else if (entradaUser >= 12 && entradaUser < 18) {
+        } else if (entradaUser > 12 && entradaUser < 18) {
             container.style.backgroundImage = "url('./image/tarde.jpg')";
             container.style.backgroundSize = "cover";
             body.style.backgroundColor = "#FFA500";
